@@ -1,0 +1,172 @@
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: #022600;
+	color: #d4d4d4;
+	font-size: clamp(16px, 3vw, 72px);
+}
+.topo {
+	background-color: black;
+	white-space: normal;
+	display: flex;
+	flex-direction: space-evenly;
+	justify-content: left;
+	position: sticky;
+	overflow: hidden;
+}
+.topbuttons {
+	font-family: 'Roboto Condensed', sans-serif;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	color: white;
+	height: 100%;
+	background-color: black;
+	/*margin-bottom: 30px;*/
+	padding-right: clamp(20px, 3vw, 90px);
+	padding-left: clamp(20px, 3vw, 90px);
+}
+.topbuttons:hover {
+	background-color: #35a619;
+	color: black;
+}
+.topbuttons:active {
+	background-color: white;
+	color: black;
+}
+.topbuttons2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	height: 100%;
+	background-color: black;
+	margin-bottom: 30px;	
+	padding-right: clamp(20px, 3vw, 90px);
+	padding-left: clamp(20px, 3vw, 90px);
+}
+.topbuttons2:hover {
+	background-color: #5865F2;
+}
+.outrobuttons {
+	display: inline;
+	justify-content: space-between;
+	background-color: black;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	margin-top: auto;
+	min-height: 100%;
+}
+.outro {
+	display: inline;
+	padding-top: 1vw;
+	color: white;
+	font-size: clamp(8px, 3vw, 20px);
+	float: left;
+}
+.outrotwitter {
+	float: right;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}
+#emaillink {
+	color: green;
+}
+a:link{
+	text-decoration: none!important;
+}
+.defaulttext {
+	font-size: clamp(20px, 6vw, 40px);
+}
+#link {
+	color: #1a8f00;
+	font-weight: bold;
+}
+#link:hover {
+	color: #20b000;
+	font-weight: bolder;
+}
+#linkcookie {
+	color: black;
+	font-style: italic;
+}
+#linkcookie:hover {
+	color: #20b000;
+}
+
+.permission {
+	margin: 0px;
+}
+
+#supercookie {
+	margin-left: 25%;
+}
+#cookie-consent-container {
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	color: black;
+	font-family: 'Roboto Condensed', sans-serif;
+	background: #177000;
+	border-radius: 10px;
+	position: fixed;
+	width: 50vw;
+	bottom: 1vw;
+	z-index: 1000;
+}
+.cookie-text {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: clamp(10px, 1.4vw, 300px);
+	text-align: center;
+	padding-right: 1vw;
+	padding-left: 1vw;
+	font-weight: bold;
+}
+#cookie-consent {
+	font-family: 'Roboto Condensed', sans-serif;
+	background: black;
+	color: white;
+	cursor: pointer;
+	border: none;
+	border-radius: 8px;
+	font-size: 2vw;
+	width: 100%;
+	vertical-align: center;
+	text-align: center;
+
+}
+
+
+
+
+/*AS COISAS ABAIXO SÃO PRA VISUALIZAÇÃO MOBILE!///AS COISAS ABAIXO SÃO PRA VISUALIZAÇÃO MOBILE!*/
+@media screen and (max-width: 768px){ 
+	/*Centraliza os botões*/
+	.topo { 
+		justify-content: space-between;
+		white-space: normal;
+		display: flex;
+		flex-direction: space-evenly;
+		position: sticky;
+		overflow: hidden;
+	}
+	/*Altera o tamanho dos botões dinâmicamente*/
+	.topbuttons {
+		font-size: clamp(10px, 4vw, 420px);
+	}
+	.topbuttons2 {
+		font-size: clamp(10px, 4vw, 420px);
+	}
+	/*Deixa os paddings do outro menores pro mobile*/
+	.outro { 
+		padding-top: 4vw;
+		padding-bottom: 4vw;
+	}
+}

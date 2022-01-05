@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<meta name=”Description” content=”Website de conversão de texto pra fala usando IA.”>
+	<meta name="google-site-verification" content="gDjBVckFCxv-gCS06Liv_0DE8rHEmwh74kpyBqlO6Rw" />
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HT4MW3Y81F"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-HT4MW3Y81F');
+	</script>
+	<!-- Google Analytics -->
+
+	<!-- Script de adsense -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7015560586203687"
+	crossorigin="anonymous"></script>
+	<!-- Script de adsense -->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FALATRON</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="static/images/Falatron.png">
+	<link rel="stylesheet" href="static/css/basis.css">
+	<link rel="stylesheet" href="static/css/index.css">
+	<script src="static/js/waitgif.js"></script>
+	<script src="static/js/cookies.js"></script>
+	<!-- <script src="static/js/scriptrandomlogo.js"></script> LOGO ANTIGO RANDOMIZADO, não mais utilizado-->
+</head>
+
+<body>
+<!-- 	<div class="Header_Logo">
+		<a href="\"><img id="jsrandom" height="121"/></a>
+	</div> 
+	LOGO ANTIGO RANDOMIZADO, não mais utilizado --> 
+	<div class="topo">
+		<div><a class="redirecionar" href="/">
+			<button class="topbuttons"><img 
+				src="static/images/Falatron.png" onmouseover="this.src='static/images/Falatronhover.png'"
+				onmouseout="this.src='static/images/Falatron.png'"
+				height="50vw"></img></button></a></div>
+				<div><a class="redirecionar" href="/static/about.html"><button class="topbuttons">Sobre</button></a></div>
+				<div><a class="redirecionar" href="/static/creditos.html"><button class="topbuttons">Créditos</button></a></div>
+				<div><a class="redirecionar" href="https://discord.com/invite/4npUee2XMk"><button class="topbuttons2">Discord</button></a></div>		
+			</div>
+			<div class="jumbotron">
+				<p class="defaulttext">FALATRON<br>Conversão de texto pra fala</p>
+				<form id="input_form" name="input_form" method="POST" action="/tts" onsubmit="showDiv()">
+					<div>
+						<select name="input_model" class="selectform" id="modelo" required onchange="remember(this.selectedIndex);">
+							<option value="" disabled selected hidden>Selecione a voz...</option>
+							<optgroup label="Chaves">
+								<option value="SeuMadruga" {{ 'selected' if model_choice == 'SeuMadruga' }} >Seu Madruga</option>
+							</optgroup>
+							<optgroup label="Políticos">
+								<option value="Bolsonaro" {{ 'selected' if model_choice == 'Bolsonaro' }}>Bolsonaro</option>
+								<option value="Lula" {{ 'selected' if model_choice == 'Lula' }}>Lula</option>
+								<option value="Arthur" {{ 'selected' if model_choice == 'Arthur' }}>Arthur do Val (Mamãe Falei)</option>
+								<option value="Dilma_Roussef" {{ 'selected' if model_choice == 'Dilma_Roussef' }}>Dilma</option>
+								<option value="Sergio" {{ 'selected' if model_choice == 'Sergio' }}>Sergio Moro</option>
+							</optgroup>
+							<optgroup label="Dragon Ball">
+								<option value="Goku" {{ 'selected' if model_choice == 'Goku' }}>Goku</option>
+							</optgroup>
+							<optgroup label="Flintstones">
+								<option value="Barney" {{ 'selected' if model_choice == 'Barney' }}>Barney Rubble</option>
+								<option value="Fred" {{ 'selected' if model_choice == 'Fred' }}>Fred Flintstone</option>
+							</optgroup>
+							<optgroup label="Youtubers">
+								<option value="Ibere" {{ 'selected' if model_choice == 'Ibere' }}>Iberê Thenório (Manual do mundo)</option>
+								<option value="Natanael" {{ 'selected' if model_choice == 'Natanael' }}>Natanael Antonioli (Fábrica de Noobs)</option>
+								<option value="Nando" {{ 'selected' if model_choice == 'Nando' }}>Nando Moura</option>
+								<option value="Caue" {{ 'selected' if model_choice == 'Caue' }}>Cauê Moura (Desce a Letra)</option>
+								<option value="Felipe" {{ 'selected' if model_choice == 'Felipe' }}>Felipe Neto</option>
+							</optgroup>
+							<optgroup label="Overwatch">
+								<option value="Reinhardt" {{ 'selected' if model_choice == 'Reinhardt' }}>Reinhardt</option>
+								<option value="Ana" {{ 'selected' if model_choice == 'Ana' }}>Ana</option>
+								<option value="Brigitte" {{ 'selected' if model_choice == 'Brigitte' }}>Brigitte</option>
+								<option value="Mercy" {{ 'selected' if model_choice == 'Mercy' }}>Mercy</option>
+								<option value="Mccree" {{ 'selected' if model_choice == 'Mccree' }}>Cole Cassidy/Jesse Mccree</option>
+								<option value="Hanzo" {{ 'selected' if model_choice == 'Hanzo' }}>Hanzo</option>
+								<option value="Zenyatta" {{ 'selected' if model_choice == 'Zenyatta' }}>Zenyatta</option>
+							</optgroup>
+							<optgroup label="Looney Tunes">
+								<option value="Vovo" {{ 'selected' if model_choice == 'Vovo' }}>Vovó</option>
+								<option value="Patolino" {{ 'selected' if model_choice == 'Patolino' }}>Patolino</option>
+							</optgroup>
+							<optgroup label="Pica Pau">
+								<option value="Leoncio" {{ 'selected' if model_choice == 'Leoncio' }}>Leôncio</option>
+							</optgroup>
+							<optgroup label="Rick e Morty">
+								<option value="Rick_Sanchez" {{ 'selected' if model_choice == 'Rick_Sanchez' }}>Rick Sanchez</option>
+							</optgroup>
+							<optgroup label="League of Legends">
+								<option value="Ivern" {{ 'selected' if model_choice == 'Ivern' }}>Ivern</option>
+							</optgroup>
+							<optgroup label="Grand Chase">
+								<option value="Elesis" {{ 'selected' if model_choice == 'Elesis' }}>Elesis Sieghart</option>
+							</optgroup>
+							<optgroup label="DC Comics">
+								<option value="Batman" {{ 'selected' if model_choice == 'Batman' }}>Batman</option>
+								<option value="Superman" {{ 'selected' if model_choice == 'Superman' }}>Superman</option>
+								<option value="Harley" {{ 'selected' if model_choice == 'Harley' }}>Arlequina</option>
+								<option value="Coringa" {{ 'selected' if model_choice == 'Coringa' }}>Coringa</option>
+								<option value="Flash" {{ 'selected' if model_choice == 'Flash' }}>Flash</option>
+								<option value="Lanterna" {{ 'selected' if model_choice == 'Lanterna' }}>Lanterna Verde</option>
+								<option value="Robocop" {{ 'selected' if model_choice == 'Robocop' }}>Robocop</option>
+							</optgroup>
+							<optgroup label="Peppa Pig">
+								<option value="NarradorPeppa" {{ 'selected' if model_choice == 'NarradorPeppa' }}>Narrador da Peppa Pig</option>
+							</optgroup>
+							<optgroup label="Jornalistas">
+								<option value="Bonner" {{ 'selected' if model_choice == 'Bonner' }}>William Bonner</option>
+							</optgroup>
+						</select>
+					</div>
+					<div>
+						<textarea class="inputtext" id="texto" name="input_text"
+						placeholder="Limite de 300 caracteres."
+						maxlength="300"
+						minlength="5"
+						onkeyup='checkForEnterKey(this.value);saveValue(this)'
+						required>
+					</textarea>
+				</div>
+				<div>
+					<input type="submit" tabindex=0 id="btnn" class="myButton" value="Fala aí!"/>
+				</div>
+			</form>	
+			<div id="pageloader" style="display: none">
+			</div>
+			<div>
+				<p class="defaulttext">Resultado</p>
+				<audio controls>
+					<source src="/{{voice}}" type="audio/wav">
+					</audio>
+				</div>
+			</div>
+		</div>
+
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7015560586203687"
+		crossorigin="anonymous"></script>
+		<!-- Anúncio Teste -->
+		<ins class="adsbygoogle"
+		style="display:block"
+		data-ad-client="ca-pub-7015560586203687"
+		data-ad-slot="4422577730"
+		data-ad-format="auto"
+		data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+		<!-- Banner de Cookies -->
+		{% if cookies_check() %}
+					{# then user has already consented so no requirement for consent banner #}
+		{% else %}
+					{# show a cookie consent banner #}
+		<div id="supercookie">
+			<div id="cookie-consent-container">
+				<p class="cookie-text">Nós utilizamos cookies para monitorar o uso do site. <a id="linkcookie" href="static/cookies.html">Política de cookies</a></p>
+				<button id="cookie-consent"><p class="cookie-text">Eu aceito.</p></button>
+			</div>
+		</div>
+		<script>
+			var fn = function () {
+				document.cookie = "cookie_consent=true";
+				document.getElementById('cookie-consent-container').hidden = true;
+			};
+			document.getElementById('cookie-consent').onclick = fn;
+		</script>
+		{% endif %}
+		<!-- FIM Banner de Cookies -->
+
+		<div class="outrobuttons">
+			<div class="outro">Colabore com o site me ajudando com um <a id="link" href="https://nubank.com.br/pagar/1b1usb/FbB22Cm2CA">Pix</a>.</div>
+			<div class="outrotwitter"><a rel="noreferrer noopener" target="_blank" href="https://twitter.com/falatronoficial"><img src="static/images/twitter.png" height="40vw"></img></a></div>
+		</div>
+	</body>
+
+	<!-- O SCRIPT ABAIXO SALVA EM COOKIE O CAMPO DE TEXTO -->
+	<!-- O SCRIPT ABAIXO ENVIA O FORMULÁRIO AO APERTAR ENTER, SHIFT-ENTER AINDA PULA LINHA NORMALMENTE -->
+	<script type="text/javascript">
+		document.getElementById("texto").value = getSavedValue("texto");
+		/* Essa parte pega o valor salvo (que é retornado pela getSavedValue) e aplica na caixa de texto */
+
+        //Essa é a função de salvar o texto, com os campos (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // O campo de ID provavelmente é o "texto" do textarea (não tenho certeza)
+            var val = e.value; // O que tiver escrito na caixa de texto
+            localStorage.setItem(id, val);// Toda vez que o user escrever, o valor de localStorage é sobreescrito. 
+          }
+
+        //A função que puxa o valor salvo, a cookie se chama "v" no localStorage.
+        function getSavedValue  (v){
+        	if (!localStorage.getItem(v)) { // Se não tiver nada dentro da variável "v",
+                return "";					// Retorna um campo vazio.
+            }
+            return localStorage.getItem(v); // Se tiver, retorna o que tiver lá.
+          }
+          function checkForEnterKey(){
+          	var textookay = document.getElementById("texto").value;
+       		//console.log(textookay);
+			if (event.keyCode === 13 && !event.shiftKey) { //Se enter for apertado e Shift não,
+				document.getElementById("texto").value = textookay.substring(0, textookay.length - 1); //Previne o enter
+				document.getElementById("btnn").click(); //e aperta o botão com a id "btnn"
+			}
+		}
+	</script>
+    
+
+    <script type="text/javascript">
+    	// Código pra lembrar o modelo que a pessoa tava usando da última vez 
+		if(localStorage!=null) {
+		  if(localStorage["sel"]!=null) {
+		    document.getElementById("modelo").selectedIndex = localStorage["sel"];
+		  }
+		}
+		//alert("d");
+		function remember(index) {
+		  if(localStorage!=null) {
+		    localStorage["sel"] = document.getElementById("modelo").selectedIndex
+		  }
+		}
+	</script>

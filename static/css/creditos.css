@@ -1,0 +1,40 @@
+.credits{
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+.tabelacredits {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+}
+.lefttd {
+    text-align: right;
+    border-right: 2px solid #177000;
+    border-bottom: 2px solid #022400;
+    border-radius:4px;
+    padding-right: 0.5rem;
+}
+.righttd {
+    text-align: left;
+    border-bottom: 2px solid #022400;
+    border-left: 2px solid #177000;
+    border-radius:4px;
+    padding-left: 0.5rem;
+}
+th {
+    background-color: #177000;
+    border-radius:4px;
+}
+/*AS COISAS ABAIXO SÃO PRA VISUALIZAÇÃO MOBILE!///AS COISAS ABAIXO SÃO PRA VISUALIZAÇÃO MOBILE!*/
+@media screen and (max-width: 420px){ 
+	.credits{
+		font-size: 1rem;
+	}
+    .tabelacredits{
+        font-size: 1.2rem;
+    }
+}
